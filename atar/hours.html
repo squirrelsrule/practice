@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+        body {
+            display: flexbox;
+
+    /* font-family: Arial, sans-serif; */
+}
+
+.block-container {
+    display: flexbox;
+    justify-content: space-between;
+}
+
+.info-block {
+    /* flex: 0 0 calc(33.33% - 20px); */
+    background-color: #85a3ee;
+    color: aliceblue;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div class="block-container" id="info-blocks">
+       
+    </div>
+
+    <script >
+      
+const jsonData = [
+    { title: "מרפאה", content: "עובד כשגרה: 8:00-17:00" },
+    { title: "חדרי אוכל", content: "חד״א קצינים-" },
+    { title: "נשקייה", content: "" }
+    
+];
+
+const blockContainer = document.getElementById("info-blocks");
+
+jsonData.forEach(item => {
+    const block = document.createElement("div");
+    block.className = "info-block";
+    block.innerHTML = `
+        <h2>${item.title}</h2>
+        <p>${item.content}</p>
+    `;
+    blockContainer.appendChild(block);
+});
+
+    </script>
+</body>
+</html>

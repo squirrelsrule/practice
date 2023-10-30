@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+     h2{
+        color:blue;
+        font-size: x-large;
+        }
+        body{
+        background-color: rgb(170, 96, 153);
+
+    }
+    </style>
+  <title style="color:rgb(97, 18, 170);">Random Hebrew Words</title>
+  <meta charset="UTF-8">
+</head>
+
+  <body>
+      
+    <center><marquee direction="down">lera </marquee></center>
+    <h1 style="color:rgb(133, 233, 145)";>  Random  Hebrew Words  </h1>
+    <style>
+    
+    </style>
+    <p id="wordDisplay"></p>
+    <h2>
+        <marquee> lera </marquee>
+    </h2>
+  <script>
+    var hebrewWords = ["אבא", "אמא", "בית", "גן", "דגם", "הב", "זית", "חיה", "טלפון", "ידע", "כסא", "למד", "מים", "נמל", "סבא", "עין", "פטר", "ציפור", "קשר", "רחם", "שולחן", "תלמה"];
+
+    function getRandomWord() {
+      var randomIndex = Math.floor(Math.random() * hebrewWords.length);
+      return hebrewWords[randomIndex];
+    }
+    
+
+    document.getElementById("wordDisplay").textContent = getRandomWord();
+  </script>
+</body>
+</html>

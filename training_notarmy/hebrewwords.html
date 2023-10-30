@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title style="color:blueviolet;">Random Hebrew Words</title>
+  <meta charset="UTF-8">
+</head>
+
+  <body>
+      
+    
+    <h1 style="color:rgb(236, 175, 83);">Random Three-Letter Hebrew Words</h1>
+    <style>
+    body{
+        background-color: rgb(129, 201, 111);
+
+    }
+    
+</style>
+    <p id="wordDisplay"></p>
+    <marquee direction="right"> lera </marquee> 
+  <script>
+    var hebrewWords = ["אבא", "אמא", "בית", "גן", "דגם", "הב", "זית", "חיה", "טלפון", "ידע", "כסא", "למד", "מים", "נמל", "סבא", "עין", "פטר", "ציפור", "קשר", "רחם", "שולחן", "תלמה"];
+
+    function getRandomWord() {
+      var randomIndex = Math.floor(Math.random() * hebrewWords.length);
+      return hebrewWords[randomIndex];
+    }
+    
+
+    document.getElementById("wordDisplay").textContent = getRandomWord();
+  </script>
+</body>
+</html>
